@@ -18,7 +18,11 @@ In the testdata sheet --->Choose the test data you want to pass to the testcase 
 
 The data from the excel sheet will be passed to the test method as a hashtable.
 
-Run the testng.xml file. You can even run as mvn test which will trigger the testng.xml
+Run the testng.xml file always.
+
+Note: If you try to run individual tests as testng test, you will get NPE as the listeners are configured in testng.xml
+
+You can add maven surefire plugin to trigger the testng.xml file from pom.xml
 
 ******************************************************************************
 How the framework works?
