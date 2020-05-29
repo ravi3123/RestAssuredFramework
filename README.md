@@ -61,7 +61,6 @@ npm install
 
 npm start
 
-# Best Buy API Playground started at http://localhost:3030
 
 ******************************************************************************
 
