@@ -67,5 +67,5 @@ npm start
 
 
 ******************************************************************************
-
-Please feel to report any issue or PR for any improvements. Reach me at mech.amuthansakthivel@gmail.com
+To get trainings on how to create this framework from scratch or to get recordings on sessions , contact mech.amuthansakthivel@gmail.com
+Please feel to report any issue or PR for any improvements.
