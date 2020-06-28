@@ -22,7 +22,6 @@ import com.restassured.utils.TestUtils;
 
 import io.restassured.RestAssured;
 import io.restassured.config.EncoderConfig;
-import io.restassured.config.LogConfig;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
@@ -30,6 +29,7 @@ public class BaseTest {
 	
 	protected StringWriter writer;
 	protected PrintStream captor;
+	
 	
 	/*
 	 * Initializing the extent report
@@ -48,7 +48,7 @@ public class BaseTest {
 	 */
 	
 	@AfterSuite
-	public void afterSuite() throws Exception {
+	public void afterSuite() throws IOException  {
 		ExtentReport.report.flush();
 		File htmlFile = new File(Constants.EXTENTREPORTPATH);
 		Desktop.getDesktop().browse(htmlFile.toURI());
@@ -61,7 +61,7 @@ public class BaseTest {
 	 */
 	@BeforeMethod
 	public void setUp() {
-		RestAssured.config = RestAssured.config().logConfig(new LogConfig().enablePrettyPrinting(false));
+		
 		writer = new StringWriter();
 		captor = new PrintStream(new WriterOutputStream(writer), true);
 	}
@@ -87,6 +87,7 @@ public class BaseTest {
 				.formParam("password",  Constants.PASSWORD)
 				.formParam("client_secret", TestUtils.decode(Constants.CLIENT_SECRET))
 				.post(Constants.BASEURL+Constants.AUTH_ENDPOINT);
+		response.then().statusCode(200);
 
 		System.out.println("OAUTH is success");
 	}
@@ -115,7 +116,7 @@ public class BaseTest {
 			temp= new String(Files.readAllBytes(Paths.get(path)));
 		}
 		catch(Exception e) {
-
+			e.printStackTrace();
 		}
 		return temp;
 

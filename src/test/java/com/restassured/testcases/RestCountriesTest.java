@@ -1,24 +1,24 @@
 package com.restassured.testcases;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import com.restassured.reports.LogStatus;
-import com.google.common.io.Files;
-import io.restassured.filter.log.RequestLoggingFilter;
-import io.restassured.response.Response;
-import com.restassured.constants.Constants;
-
 import static io.restassured.RestAssured.given;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Hashtable;
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.google.common.io.Files;
+import com.restassured.constants.Constants;
+
+import io.restassured.filter.log.RequestLoggingFilter;
+import io.restassured.response.Response;
+
 
 public class RestCountriesTest extends BaseTest{
 
-
+	
 
 	/*
 	 * There should be a test case matching this test name in RUNMANAGER and TESTDATA sheet
@@ -34,6 +34,7 @@ public class RestCountriesTest extends BaseTest{
 		 * Replacing the name parameter in the endpoint with the data from excel sheet.
 		 * Data providers return a hastable and the column name is used as a key to get the value
 		 */
+		
 		
 		Response response=	given()
 				.filter(new RequestLoggingFilter(captor)) //This line is mandatory to log the request details to extent report

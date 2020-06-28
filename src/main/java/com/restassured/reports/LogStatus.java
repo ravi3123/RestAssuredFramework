@@ -57,20 +57,5 @@ public class LogStatus {
 	{
 		ExtentManager.getExtTest().log(com.relevantcodes.extentreports.LogStatus.WARNING, message);
 	}
-	/*public static void pass(String string, String addScreenCapture) {
-
-			ExtentManager.getExtTest().
-			log(com.relevantcodes.extentreports.LogStatus.PASS, string,ExtentManager.getExtTest().addBase64ScreenShot("data:image/png;base64,"+TestUtils.getBase64Image(addScreenCapture)));
-		
-	}
-
-	public static void fail(String string, String addScreenCapture)
-	{
-			ExtentManager.getExtTest().log(com.relevantcodes.extentreports.LogStatus.FAIL, string,ExtentManager.getExtTest().addBase64ScreenShot("data:image/png;base64,"+TestUtils.getBase64Image(addScreenCapture)));
-	}
-
-	public static void skip(String string, String addScreenCapture)
-	{
-			ExtentManager.getExtTest().log(com.relevantcodes.extentreports.LogStatus.SKIP, string,ExtentManager.getExtTest().addBase64ScreenShot("data:image/png;base64,"+TestUtils.getBase64Image(addScreenCapture)));
-	}*/
+	
 }

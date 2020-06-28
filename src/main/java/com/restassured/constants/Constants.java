@@ -1,6 +1,10 @@
 package com.restassured.constants;
 
 public class Constants {
+	
+	private Constants() {
+		
+	}
 
 	public static final String EXCELPATH = System.getProperty("user.dir")+"/src/test/resources/testdata.xlsx";
 	public static final String TESTDATASHEETNAME = "TestData";

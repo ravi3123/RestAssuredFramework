@@ -44,7 +44,6 @@ public class TestUtils {
 			workbook=new XSSFWorkbook(fs);
 			sheet=workbook.getSheet(Constants.RUNMANAGERSHEET);
 			for(int i=1;i<=getLastRowNum(Constants.RUNMANAGERSHEET);i++) {
-				//rowAndTestCaseMap.put(i,sheet.getRow(i).getCell(0).getStringCellValue().toString());
 				testCases.add(getCellContent(Constants.RUNMANAGERSHEET, i, "TestCaseName"));
 				testDescription.add(getCellContent(Constants.RUNMANAGERSHEET, i, "Test Case Description"));
 				runStatus.add(getCellContent(Constants.RUNMANAGERSHEET, i, "Execute"));

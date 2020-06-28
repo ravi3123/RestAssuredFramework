@@ -1,13 +1,8 @@
 package com.restassured.reports;
 
 import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 
 import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
 import com.restassured.constants.Constants;
 
 

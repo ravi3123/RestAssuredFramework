@@ -40,22 +40,15 @@ public class ListenerClass implements ITestListener{
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		/*if((ReadPropertyFile.get("RunMode").equalsIgnoreCase("Remote"))&&ReadPropertyFile.get("RemoteMode").equalsIgnoreCase("Zalenium")) {
-			Cookie cookie = new Cookie("zaleniumTestPassed", "true");
-		    DriverManager.getDriver().manage().addCookie(cookie);
-		}*/
+	
 		LogStatus.pass(result.getMethod().getDescription()+ " test case is passed");
 		ExtentReport.report.endTest(ExtentManager.getExtTest());
 	}
 
 	public void onTestFailure(ITestResult result) {
-		/*if((ReadPropertyFile.get("RunMode").equalsIgnoreCase("Remote"))&&ReadPropertyFile.get("RemoteMode").equalsIgnoreCase("Zalenium")) {
-			Cookie cookie = new Cookie("zaleniumTestPassed", "false");
-		    DriverManager.getDriver().manage().addCookie(cookie);
-		}*/
+		
 		LogStatus.fail(result.getMethod().getDescription()+ " is failed");
 		LogStatus.fail(result.getThrowable().toString());
-		//LogStatus.fail("Failed",TestUtils.pullScreenshotPath());
 		ExtentReport.report.endTest(ExtentManager.getExtTest());
 		
 	}
@@ -68,7 +61,6 @@ public class ListenerClass implements ITestListener{
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
 		ExtentReport.report.endTest(ExtentManager.getExtTest());
 	}
 

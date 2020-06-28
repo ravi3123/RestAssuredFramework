@@ -11,7 +11,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.restassured.constants.Constants;
-import com.restassured.reports.LogStatus;
 import com.restassured.requests.pojo.PostProductRequest;
 import com.restassured.responses.pojo.PostProductResponse;
 import com.restassured.utils.RandomUtils;
@@ -45,6 +44,7 @@ public class BestBuyAPITests extends BaseTest{
 
 	@Test
 	public void getProducts(Hashtable<String , String> data) {
+		
 		Response response=	given()
 				.filter(new RequestLoggingFilter(captor)) //This line is mandatory to log the request details to extent report
 				.log()
@@ -155,7 +155,6 @@ public class BestBuyAPITests extends BaseTest{
 
 		PostProductResponse resobj= response.as(PostProductResponse.class); 
 
-		System.out.println(resobj.toString());
 		//Assertion using pojo getter method
 		Assert.assertEquals(resobj.getName(), data.get("name"));
 
