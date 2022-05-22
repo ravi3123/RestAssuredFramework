@@ -51,7 +51,7 @@ public class RestCountriesTest extends BaseTest{
 		
 		//Asserting the country code in the response using jsonPath. 
 		//Expected value is from TESTDATA sheet and column expectedCountryCapital
-		Assert.assertEquals(response.jsonPath().get("[0].capital"), data.get("expectedCountryCapital"));
+		Assert.assertTrue(response.jsonPath().get("[0].capital").toString().contains(data.get("expectedCountryCapital")));
 		
 		//Writing the response to an log file
 		Files.write(response.asByteArray(), 
