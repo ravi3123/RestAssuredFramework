@@ -33,7 +33,7 @@ public class BaseTest {
 	
 	/*
 	 * Initializing the extent report
-	 * @author Amuthan Sakthivel
+	 * @author M B RAVIKUMAR
 	 */
 	@BeforeSuite
 	public void setUpSuite() {
@@ -44,7 +44,7 @@ public class BaseTest {
 	/*
 	 * Flusing the extent report
 	 * Opening the extent report automatically after the test suite execution.
-	 * @author Amuthan Sakthivel
+	 * @author M B RAVIKUMAR
 	 */
 	
 	@AfterSuite
@@ -57,7 +57,7 @@ public class BaseTest {
 
 	/*
 	 * This method helps to write the request and reponse to the extent report
-	 * @author Amuthan Sakthivel
+	 * @author M B RAVIKUMAR
 	 */
 	@BeforeMethod
 	public void setUp() {
@@ -72,7 +72,7 @@ public class BaseTest {
 	 * This might not be applied/used in the project.
 	 * Provided as an sample to handle OAUTH scenarios and to handle x-www-form-urlencoded content type.
 	 * Perform OAuth only once before each suite
-	 * @author : Amuthan Sakthivel
+	 * @author : M B RAVIKUMAR
 	 */
 	protected void performOAuth() {
 
@@ -94,7 +94,7 @@ public class BaseTest {
 
 	/*
 	 * Format the api string and log in Extent Report
-	 * @author : Amuthan Sakthivel
+	 * @author : M B RAVIKUMAR
 	 * @param  : apicontent
 	 */
 	protected void formatAPIAndLogInReport(String content) {
@@ -107,7 +107,7 @@ public class BaseTest {
 
 	/*
 	 * Read the json file and convert to String
-	 * @author : Amuthan Sakthivel
+	 * @author : M B RAVIKUMAR
 	 * @param  : filepath
 	 */
 	public String generateStringFromResource(String path) throws IOException {

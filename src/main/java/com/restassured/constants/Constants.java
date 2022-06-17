@@ -20,7 +20,7 @@ public class Constants {
 	
 	public static final String RUNMANAGERSHEET= "RUNMANAGER";
 	public static final String JSONSLOCATION=System.getProperty("user.dir")+"/src/test/resources/jsons";
-	public static final String BASEURL = "https://restcountries.eu";
+	public static final String BASEURL = "https://restcountries.com";
 	public static final String BASEURL_BESTBUY = "http://localhost:3030";
 	public static final String USERNAME ="";
 	public static final String CLIENT_SECRET="";
@@ -30,11 +30,11 @@ public class Constants {
 	public static final String FSI_LANGUAGE="";
 
 	//Endpoints
-	public static final String COUNTRYDETAILSBYNAME_ENDPOINT = "/rest/v2/name/{name}";
+	public static final String COUNTRYDETAILSBYNAME_ENDPOINT = "/v3.1/name/{name}";
 	public static final String BESTBUY_GETPRODUCTS_ENDPOINT = "/products?$limit={limit}";
 	public static final String BESTBUY_POSTPRODUCT_ENDPOINT ="/products";
 	public static final String AUTH_ENDPOINT = "";
-	
+
 	//Request xml paths
 	public static final String REQUEST_JSON_FOLDER_PATH =  System.getProperty("user.dir")+
 			"/src/test/resources/jsonsforrequestbody/";
